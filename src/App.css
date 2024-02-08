@@ -1,3 +1,22 @@
+.header-nav{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  background-color: brown;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.header-nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-nav li a:hover{
+  color: black;
+}
+
 .register-page{
   background-color: #f5f5f5;
   padding-top: 10%;
