@@ -17,6 +17,10 @@
   color: black;
 }
 
+.todolist{
+  list-style: none;
+}
+
 .register-page{
   background-color: #f5f5f5;
   padding-top: 10%;
