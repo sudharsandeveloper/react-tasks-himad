@@ -6,6 +6,7 @@ import Todo from "./Todo";
 import Register from "./Register";
 import ToDoList from "./ToDoList";
 import Links from "./Links";
+import NotFoundPage from "./NotFoundPage";
 
 function Navbar(){
     return(
@@ -18,6 +19,7 @@ function Navbar(){
                     <Route path="/todo" element={<Todo />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/todo-list" element={<ToDoList />} />
+                    <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </BrowserRouter>
         </>

@@ -6,6 +6,7 @@
   background-color: brown;
   padding: 20px;
   font-size: 18px;
+  margin-bottom: 0;
 }
 
 .header-nav li a {
@@ -17,29 +18,76 @@
   color: black;
 }
 
+.r-line{
+  border-bottom: 1px solid #f2ebeb;
+  width: 46%;
+  margin-bottom: 9px;
+}
+
+.r-text{
+  text-align: center;
+  padding: 0px 15px;
+  color: gray;
+}
+
+.sign-up-btn{
+  background-color: #62a2e4 !important;
+  color: white !important;
+  font-size: 24px !important;
+}
+
+.bg-image{
+  height: 100%;
+}
+
+.a-text{
+  color: #4970ab;
+}
+
+.img-404{
+  height: 70%;
+  width: 100%;
+}
+
+.img-404 img{
+  width: 100%;
+  height: 100%;
+}
+
 .todolist{
   list-style: none;
 }
 
 .register-page{
   background-color: #f5f5f5;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .form-card{
   background-color: #ffffff;
+  max-width: 1140px !important;
 }
 
 .form-section{
-  padding: 8%;
+  padding: 12%;
+}
+
+.form-section label{
+  font-weight: 600;
+}
+
+.form-section-input{
+  height: 50px;
+  font-size: 18px;
 }
 
 .apple-sign-btn{
-  background-color: #000000;
+  background-color: black !important;
   color: #ffffff;
   border: none;
-  padding: 10px;
+  padding: 15px !important;
+  font-size: 20px !important;
 }
 .apple-icon{
   color: #ffffff;
@@ -48,10 +96,13 @@
 .page-heading{
   color: #000000;
   font-weight: 700;
+  font-size: 42px;
 }
 
 .des-1{
-  font-size: 12px;
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 22px;
 }
 
 /* .App {
