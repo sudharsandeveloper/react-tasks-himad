@@ -10,6 +10,7 @@ function ToDoList() {
         if(name != ''){
             setUser([...User,{id: Date.now(), name: name, edit:false}]);
             setName('')
+            console.log(User)
         }
     }
 
@@ -17,17 +18,18 @@ function ToDoList() {
         setUser(User.filter(user => user.id !== id))
     }
 
+    const editName = (id) => {
+        setUser(User.map(user => user.id === id ? { ...user, edit: !user.edit } : user))
+        console.log(User)
+    }
+
+    const editUserName = (id, NewName) => {
+        setUser(User.map(user => user.id === id ? { ...user, name:NewName, edit:false } : user))
+        console.log(User)
+    }
 
     return (
-    <div>
-        <ul>
-            {User.map((i) =>
-            <> 
-                <li key={i.id}>{i.name}</li>
-                <button onClick={() => deleteName(i.id)}>Delete</button>
-            </>
-            )}
-        </ul>
+    <div className='container mt-5'>
         <div>
             <input 
                 type='text' 
@@ -38,6 +40,23 @@ function ToDoList() {
             />
             <button onClick={addName}>Add</button><br/>
         </div>
+        <ul className='todolist'>
+            {User.map((i) =>
+                <li className='list' key={i.id}>
+                    {i.edit ? (
+                        <input 
+                            type='text'
+                            defaultValue={i.name}
+                            onBlur={(e) => editUserName(i.id, e.target.value)}
+                        />
+                    ):(
+                        <span>{i.name}</span>
+                    )}
+                    <button onClick={() => editName(i.id)}>{ i.edit ? 'Save':'Edit' }</button>
+                    <button onClick={() => deleteName(i.id)}>Delete</button>
+                </li>
+            )}
+        </ul>
     </div>
 
   )
@@ -74,21 +93,21 @@ export default ToDoList
 //       <input type="text" value={task} onChange={(e) => setTask(e.target.value)} />
 //       <button onClick={addTask}>Add Task</button>
 //       <ul>
-//         {tasks.map((task) => (
-//           <li key={task.id}>
-//             {task.isEditing ? (
-//               <input
-//                 type="text"
-//                 defaultValue={task.text}
-//                 onBlur={(e) => editTask(task.id, e.target.value)}
-//               />
-//             ) : (
-//               <span>{task.text}</span>
-//             )}
-//             <button onClick={() => toggleEdit(task.id)}>{task.isEditing ? 'Save' : 'Edit'}</button>
-//             <button onClick={() => deleteTask(task.id)}>Delete</button>
-//           </li>
-//         ))}
+        // {tasks.map((task) => (
+        //   <li key={task.id}>
+        //     {task.isEditing ? (
+        //       <input
+        //         type="text"
+        //         defaultValue={task.text}
+        //         onBlur={(e) => editTask(task.id, e.target.value)}
+        //       />
+        //     ) : (
+        //       <span>{task.text}</span>
+        //     )}
+        //     <button onClick={() => toggleEdit(task.id)}>{task.isEditing ? 'Save' : 'Edit'}</button>
+        //     <button onClick={() => deleteTask(task.id)}>Delete</button>
+        //   </li>
+        // ))}
 //       </ul>
 //     </div>
 //   );
