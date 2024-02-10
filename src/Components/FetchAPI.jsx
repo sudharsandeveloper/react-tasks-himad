@@ -30,9 +30,9 @@ function FetchAPI() {
             </tr>
         </thead>
         <tbody>
-            {countries.map((country) => (
+            {countries.map((country, index) => (
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{index+1}</th>
                     <td>{country.name.common}</td>
                     <td>{country.region}</td>
                     <td>{country.capital}</td>
