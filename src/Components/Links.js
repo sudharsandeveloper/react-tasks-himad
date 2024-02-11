@@ -8,6 +8,7 @@ function Links() {
         <li><Link to={'/about'}>About</Link></li>
         {/* <li><Link to={'/todo'}>To-Do</Link></li> */}
         <li><Link to={'/todo-list'}>To-Do-List</Link></li>
+        <li><Link to={'/replica'}>Replica</Link></li>
         <li><Link to={'/register'}>Register</Link></li>
         <li><Link to={'/country'}>Country Details</Link></li>
     </ul>

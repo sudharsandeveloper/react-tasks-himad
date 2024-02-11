@@ -8,6 +8,7 @@ import ToDoList from "./ToDoList";
 import Links from "./Links";
 import NotFoundPage from "./NotFoundPage";
 import FetchAPI from "./FetchAPI";
+import Replica from "./Replica";
 
 function Navbar(){
     return(
@@ -21,6 +22,7 @@ function Navbar(){
                     <Route path="/country" element={<FetchAPI />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/todo-list" element={<ToDoList />} />
+                    <Route path="/replica" element={<Replica />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </BrowserRouter>
