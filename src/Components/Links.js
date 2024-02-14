@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import ThemeContext from '../Contexts/ThemeContext'
 
 function Links() {
@@ -18,8 +18,10 @@ function Links() {
         <li><Link to={'/replica'}>Replica</Link></li>
         <li><Link to={'/register'}>Register</Link></li>
         <li><Link to={'/country'}>Country Details</Link></li>
+        <li><Link to={'/cart'}>Add to cart</Link></li>  
       </ul>
-      <div>
+      <div className='d-flex gap-4'>
+        <span><FontAwesomeIcon className='nav-icon' icon={faCartShopping} /><span class="badge cart-batch">0</span></span>
         <span><FontAwesomeIcon className='nav-icon' style={{color: theme? 'white':'yellow'}} onClick={toggleTheme} icon={theme ? faMoon:faSun}/></span>
       </div>
     </div>

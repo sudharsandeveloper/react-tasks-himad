@@ -9,6 +9,7 @@ import Links from "./Links";
 import NotFoundPage from "./NotFoundPage";
 import FetchAPI from "./FetchAPI";
 import Replica from "./Replica";
+import AddToCart from "./AddToCart";
 
 function Navbar(){
     return(
@@ -23,6 +24,7 @@ function Navbar(){
                     <Route path="/register" element={<Register />} />
                     <Route path="/todo-list" element={<ToDoList />} />
                     <Route path="/replica" element={<Replica />} />
+                    <Route path="/cart" element={<AddToCart />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </BrowserRouter>

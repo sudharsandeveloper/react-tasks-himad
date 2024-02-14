@@ -3,14 +3,14 @@
   justify-content: center;
   gap: 20px;
   list-style: none;
-  background-color: brown;
+  background-color: #51a5ff;
   padding: 20px;
   font-size: 18px;
   margin-bottom: 0;
 }
 
 .top-nav{
-  background-color: brown;
+  background-color: #51a5ff;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -18,10 +18,11 @@
 .nav-icon{
   height: 30px;
   cursor: pointer;
+  color: white;
 }
 
 .header-bg{
-  background-color: brown;
+  background-color: #51a5ff;
   padding: 25px 75px;
 }
 
@@ -179,4 +180,37 @@ cursor: pointer;
 .dark{
   background-color: '#363537';
   color: '#FAFAFA';
+}
+
+/* cart */
+.product-img{
+  height: 150px;
+}
+
+.cart-card{
+  padding: 15px;
+}
+
+.brand-name{
+  font-weight: 700;
+}
+
+.product-description {
+  height: 50px; /* Adjust the height as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Ensures the text stays on a single line */
+  width: 100%; /* Ensure the container has a defined width */
+  display: block;
+}
+ .cart-batch{
+  background-color: green;
+  position: absolute;
+  top: 5px;
+  right: 95px;
 }
