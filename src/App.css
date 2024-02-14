@@ -9,6 +9,17 @@
   margin-bottom: 0;
 }
 
+.top-nav{
+  background-color: brown;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.nav-icon{
+  height: 30px;
+  cursor: pointer;
+}
+
 .header-bg{
   background-color: brown;
   padding: 25px 75px;
@@ -161,26 +172,11 @@
 cursor: pointer;
 }
 
-/* .App {
-  text-align: center;
-  margin-top: 50px;
+.light{
+  background-color: '#ffffff';
+  color: '#000000';
 }
-
-input[type="text"] {
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
+.dark{
+  background-color: '#363537';
+  color: '#FAFAFA';
 }
-
-button {
-  padding: 10px;
-  margin: 5px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  margin: 10px;
-} */

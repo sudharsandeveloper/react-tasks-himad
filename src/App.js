@@ -1,10 +1,17 @@
+import { useContext } from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
+import ThemeContext from './Contexts/ThemeContext';
+import ThemeProvider from './Contexts/ThemeProvider';
 
 function App() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <Navbar />
+    <div className="dark">
+      <ThemeProvider>
+        <Navbar />
+      </ThemeProvider>
     </div>
   );
 }

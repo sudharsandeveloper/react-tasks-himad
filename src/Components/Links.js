@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import ThemeContext from '../Contexts/ThemeContext'
 
 function Links() {
+
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <ul className='header-nav'>
+    <div className='top-nav d-flex justify-content-between align-items-center'>
+      <ul className='header-nav'>
         {/* <li><Link to={'/'}>Home</Link></li> */}
         {/* <li><Link to={'/about'}>About</Link></li> */}
         {/* <li><Link to={'/todo'}>To-Do</Link></li> */}
@@ -11,7 +18,11 @@ function Links() {
         <li><Link to={'/replica'}>Replica</Link></li>
         <li><Link to={'/register'}>Register</Link></li>
         <li><Link to={'/country'}>Country Details</Link></li>
-    </ul>
+      </ul>
+      <div>
+        <span><FontAwesomeIcon className='nav-icon' style={{color: theme? 'white':'yellow'}} onClick={toggleTheme} icon={theme ? faMoon:faSun}/></span>
+      </div>
+    </div>
   )
 }
 
