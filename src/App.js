@@ -1,13 +1,16 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import ThemeProvider from './Contexts/ThemeProvider';
+import { CartProvider } from './Contexts/CartContext';
 
 function App() {
 
   return (
-    <div className="dark">
+    <div className="">
       <ThemeProvider>
-        <Navbar />
+        <CartProvider>
+          <Navbar />
+        </CartProvider>
       </ThemeProvider>
     </div>
   );

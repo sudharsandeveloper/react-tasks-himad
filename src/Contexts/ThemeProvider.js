@@ -4,8 +4,6 @@ import ThemeContext from './ThemeContext';
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(false);
   
-
-  // Function to toggle auth state
   const toggleTheme = () => {
     setTheme(!theme);
   };
