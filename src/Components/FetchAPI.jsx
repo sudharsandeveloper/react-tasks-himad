@@ -18,7 +18,7 @@ function FetchAPI() {
 
   return (
 
-    <table class="table">
+    <table class="container table mt-5 mb-5">
         <thead>
             <tr>
                 <th scope="col">#</th>
