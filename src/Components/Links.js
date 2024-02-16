@@ -19,7 +19,8 @@ function Links() {
         <li><Link to={'/replica'}>Replica</Link></li>
         <li><Link to={'/register'}>Register</Link></li>
         <li><Link to={'/country'}>Country Details</Link></li>
-        <li><Link to={'/cart'}>Add to cart</Link></li>  
+        <li><Link to={'/todo-reducer'}>To-Do Reducer</Link></li> 
+        <li><Link to={'/cart'}>Add to cart</Link></li> 
       </ul>
       <div className='d-flex gap-4'>
         <span onClick={() => setModalShow(true)}>

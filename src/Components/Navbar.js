@@ -10,6 +10,8 @@ import NotFoundPage from "./NotFoundPage";
 import FetchAPI from "./FetchAPI";
 import Replica from "./Replica";
 import AddToCart from "./AddToCart";
+import CounterReducer from "./CounterReducer";
+import ReducerToDo from "./ReducerToDo";
 
 function Navbar(){
     return(
@@ -25,6 +27,8 @@ function Navbar(){
                     <Route path="/todo-list" element={<ToDoList />} />
                     <Route path="/replica" element={<Replica />} />
                     <Route path="/cart" element={<AddToCart />} />
+                    <Route path="/count-reducer" element={<CounterReducer />} />
+                    <Route path="/todo-reducer" element={<ReducerToDo />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </BrowserRouter>
