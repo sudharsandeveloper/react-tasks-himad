@@ -12,6 +12,7 @@ import Replica from "./Replica";
 import AddToCart from "./AddToCart";
 import CounterReducer from "./CounterReducer";
 import ReducerToDo from "./ReducerToDo";
+import ReduxToDo from "./ReduxToDo";
 
 function Navbar(){
     return(
@@ -29,6 +30,7 @@ function Navbar(){
                     <Route path="/cart" element={<AddToCart />} />
                     <Route path="/count-reducer" element={<CounterReducer />} />
                     <Route path="/todo-reducer" element={<ReducerToDo />} />
+                    <Route path="/todo-redux" element={<ReduxToDo />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </BrowserRouter>
